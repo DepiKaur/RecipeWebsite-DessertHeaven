@@ -1,0 +1,45 @@
+.ingredients-icon > * {
+    font-size: 0.8rem;
+}
+
+.ingredients-icon > span {
+    margin-left: 5px;
+}
+
+
+@media (max-width: 500px) {
+    .ingredients-icon > * {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 780px) {
+    .ingredients-icon > * {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 980px) {
+    .ingredients-icon > * {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+    .ingredients-icon > * {
+        font-size: 0.75rem;
+    }
+}
+
+
+@media (min-width: 1181px) and (max-width: 1480px) {
+    .ingredients-icon > * {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1481px) and (max-width: 1780px) {
+    .ingredients-icon > * {
+        font-size: 0.75rem;
+    }
+}

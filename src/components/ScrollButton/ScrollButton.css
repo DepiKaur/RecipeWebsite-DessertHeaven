@@ -1,0 +1,29 @@
+.scroll-button {
+    position: fixed;
+    bottom: 40px;
+    right: 0;              /* scroll-button positioned at the bottom right corner */
+    font-size: 1.1rem;
+    margin-right: 0;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--background-color);
+    border-radius: 15px;
+    z-index: 1000;         /* to ensure the button is above other elements */
+    cursor: pointer;
+    background-color: var(--teal-color);
+    display: none;         /* initially hidden */
+}
+
+.scroll-button:hover {
+    background-color: var(--teal-color);
+}
+
+.scroll-button.visible {
+    display: inline;       /* display when the button is visible */
+}
+
+@media (max-width: 600px) {
+    .scroll-button {
+        font-size: 0.7rem;
+        padding: 0;
+    }
+}

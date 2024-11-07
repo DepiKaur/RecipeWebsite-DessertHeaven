@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.comment-main {
+    background-color: #f7fdf4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.comment-main > .container {
+    background-color: #F1FAEE;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 60%;
+    border: solid 1rem #A8DADC;
+    margin-bottom: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.form > div {
+    width: 100%;
+}
+
+.comment-main h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--red-color);
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form>.name-div>input[type="text"],
+.form>.comment-div>textarea,
+.form>.name-div>input[type="text"]:focus,
+.form>.comment-div>textarea:focus {
+    width: 100%;
+    border: 1px solid var(--light-pink-color);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white-color);
+    outline: none;
+}
+
+.form > .name-div > input {
+    margin-bottom: 0;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+.anonymous-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 1rem;
+    color: var(--icon-color);
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+
+.button-container > button {
+    border: none;
+    padding: 10px 20px;
+    margin: 0.3rem;
+    background-color: var(--red-color);
+    color: var(--white-color);
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.421);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.message p {
+    color: var(--red-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .comment-main {
+        padding: 0.5rem;
+    }
+
+    .comment-main > .container {
+        padding: 1rem;
+        width: 80%;
+    }
+
+    .comment-main h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .form>.name-div>input[type="text"],
+    .form>.comment-div>textarea {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .anonymous-label {
+        font-size: 0.8rem;
+    }
+
+    .comment-main>.container>.form>.button-container>button {
+        padding: 8px 15px;
+    }
+
+    .message p {
+        font-size: 1.1rem;
+    }
+}

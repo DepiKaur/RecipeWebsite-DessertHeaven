@@ -1,0 +1,204 @@
+div > .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-list > li {
+    margin-top: 10px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.recipe-list > h3 {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.6em;
+    background-color: #eaefef;
+
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 12px;
+    transition: 0.2s;
+    list-style-type: none;
+}
+
+.details > * {
+    font-size: 0.8rem;
+}
+
+.details svg {
+    color: var(--icon-color);
+    font-size: 1.1em;
+}
+
+.details>li {
+    margin-top: 0;
+} 
+
+.difficulty-level {
+    display: flex;
+    gap: 10px;
+}
+
+.difficulty-text {
+    align-content: flex-end;
+    display: visible;
+}
+
+.difficulty-bars {
+    transition: 0.3s;
+    display: flex;
+    gap: 3.5px;
+    /* Mellanrum mellan staplarna */
+}
+
+.difficulty-bars:hover {
+    transform: scale(1.2);
+}
+
+.bar {
+    width: 4px;
+    height: 1.1rem;
+    max-height: 18px;
+    background-color: lightgray;
+    /* Tom stapel */
+}
+
+.bar.filled {
+    background-color: var(--icon-color);
+    /* Fylld stapel */
+}
+
+.stars>div {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    font-size: 1em;
+}
+
+.stars svg {
+    shape-rendering: geometricPrecision;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+@media (max-width: 500px) {
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .details > * {
+        font-size: 0.7rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }    
+}
+
+@media (min-width: 501px) and (max-width: 780px) {
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .details > * {
+        font-size: 0.7rem;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 980px) {
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .details > * {
+        font-size: 0.75rem;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .details > * , .details > svg{
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1480px) {
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .details > *, .details > svg {
+        font-size: 0.75rem;
+    }
+
+    .bar {
+        height: 0.9rem;
+    }
+}
+
+@media (min-width: 1481px) and (max-width: 1780px) {
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .details {
+        padding: 0.6rem;
+    }
+
+    .details > *, .details > svg {
+        font-size: 0.8rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }
+}

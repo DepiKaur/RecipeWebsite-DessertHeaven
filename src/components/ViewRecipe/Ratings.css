@@ -1,0 +1,27 @@
+.rating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1.38em 0;
+}
+
+.rating-input {
+    display: none;
+}
+
+.rating-stars {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    .rating-container {
+        font-size: 1.5rem;
+        padding: 1em 0; 
+    }
+
+    .rating-stars {
+        font-size: 1.5rem;
+    }
+}

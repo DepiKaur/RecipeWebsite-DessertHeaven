@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-accent: rgba(0, 255, 255, 0.078);
+  --teal-color: #A8DADC;
+  --icon-color: #39878a;
+  --yellow-color: #ec9b19;
+  --background-color: #F1FAEE;
+  --card-color: #FFDDD2;
+  --light-pink-color: #fbe6e0;
+  --white-color: rgb(255, 255, 255);
+  --red-msg-color: #721c24;
+  --pink-background: #f8d7da;
+  --pink-border: #f5c6cb;
+  --red-color: #E63946;
+  --activated-red-button: #D62839;
+  --light-grey-text: #585858;
+  --light-grey-icon: #888;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--yellow-color);
+  color: var(--white-color);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* error-handling for wrong url */
+
+.error-box {
+  background-color: var(--pink-background);
+  color: var(--red-msg-color);
+  border: 1px solid var(--pink-border);
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.error-box strong {
+  font-weight: bold;
+}

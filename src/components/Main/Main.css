@@ -1,0 +1,126 @@
+.landing-main {
+    overflow: hidden;
+}
+
+.landing-main>h2 {
+    font-size: 2rem;
+    background-color: var(--background-color);
+    padding: 0 0 0.5rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+.landing-main>p {
+    font-size: 1.2rem;
+    background-color: var(--background-color);
+    color: var(--light-grey-text);
+    text-align: center;
+}
+
+.landing-main>div>p {
+    font-size: 1.5rem;
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--red-msg-color);
+}
+
+.body>.landing-main>.card-container {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.1rem;
+    padding: 2em 10em;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .landing-main>h2 {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .landing-main>p {
+        font-size: 1rem;
+    }
+
+    .body>.landing-main>.card-container {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        padding: 0.5em 2em;
+    }
+
+    .scroll-container a {
+        font-size: 12px;
+    }
+
+    .scroll-container a span {
+        font-size: 1rem;
+    }
+
+    .scroll-button {
+        padding: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media only screen and ((min-width: 501px) and (max-width: 780px)) {
+    .landing-main>h2 {
+        font-size: 1.5rem;
+        padding: 1rem 0 0 0;
+    }
+
+    .landing-main>p {
+        font-size: 1rem;
+    }
+
+    .body>.landing-main>.card-container {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-gap: 15px;
+        padding: 1em 3.8em;
+    }
+
+    .scroll-container a {
+        font-size: 12px;
+    }
+
+    .scroll-container a span {
+        font-size: 1rem;
+    }
+
+    .scroll-button {
+        padding: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+}
+
+@media only screen and ((min-width: 781px) and (max-width: 980px)) {
+    .body>.landing-main>.card-container {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-gap: 15px;
+        padding: 1em 5em;
+    }
+}
+
+@media only screen and ((min-width: 981px) and (max-width: 1180px)) {
+    .body>.landing-main>.card-container {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        grid-gap: 15px;
+        padding: 1em 5em;
+    }
+}
+
+@media only screen and ((min-width: 1181px) and (max-width: 1480px)) {
+    .body>.landing-main>.card-container {
+        grid-template-columns: repeat(4, minmax(240px, 1fr));
+        grid-gap: 15px;
+        padding: 1em 8em;
+    }
+}
+
+@media only screen and ((min-width: 1481px) and (max-width: 1780px)) {
+    .body>.landing-main>.card-container {
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+        grid-gap: 15px;
+        padding: 1em 10em;
+    }
+}

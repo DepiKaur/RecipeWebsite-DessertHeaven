@@ -1,0 +1,380 @@
+.card-link {
+    text-decoration: none;  /* Remove the underline */
+    color: inherit; /* Inherit the color to keep it consistent */
+    display: block; /* the link takes full width of its container */
+}
+
+.card {
+    /* if a single card is on screen, to not be strecthed set a max width if its a single or few cards with alot of space */
+    width: 300px;
+    max-width: 300px;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* center the few cards if alot of space exists */
+    margin: auto;
+    padding: .4em 1em;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card > .image-container > img {
+    width: 100%; /* Take up the full width of the card */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* -------- heart-icon on the recipe-image ----------------  */
+
+.image-container {
+    position: relative;
+}
+  
+.recipe-image {
+    width: 100%;
+    height: auto;
+}
+  
+.favorite-icon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 1rem;
+    color: var(--red-color);               /* color of the outlined heart-icon */
+    background-color: rgba(255, 255, 255, 0.8);          /* white background with opacity= 0.8*/
+    border-radius: 50%;       /* circular background for the heart-icon */
+    padding: 8px;             /* space around the heart-icon */
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+  
+.favorite-icon.filled {
+    color: var(--red-color);           /* color of filled heart */
+    background-color: rgba(255, 255, 255, 0.8);    /* white background when filled */
+}
+  
+.favorite-icon:hover {
+    color: white;
+    background-color: var(--red-color);  
+}
+/* ---------------------------------------------------   */
+
+ .card > div > .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-list > li {
+    margin-top: 10px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.recipe-list > h3 {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.card > img {
+    width: 100%;
+    height: 200px;
+}
+
+.card > div > .recipe-list > li > p {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.card > div {
+    width: 100%;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    background-color: #eaefef;
+
+    width: 100%;
+    height: auto;
+    padding: 0.7rem;
+    border-radius: 5px;
+    transition: 0.2s;
+    margin-top: 0.3rem;
+    list-style-type: none;
+}
+
+.details > * {
+    font-size: 0.8rem;
+}
+
+.details svg {
+    color: var(--icon-color);
+    font-size: 1.1em;
+}
+
+.details>li {
+    margin-top: 0;
+} 
+
+.difficulty-level {
+    display: flex;
+    gap: 10px;
+}
+
+.difficulty-text {
+    align-content: flex-end;
+    display: visible;
+}
+
+.difficulty-bars {
+    transition: 0.3s;
+    display: flex;
+    gap: 3.5px;
+    /* Mellanrum mellan staplarna */
+}
+
+.difficulty-bars:hover {
+    transform: scale(1.2);
+}
+
+.bar {
+    width: 4px;
+    height: 1.1rem;
+    max-height: 18px;
+    background-color: lightgray;
+    /* Tom stapel */
+}
+
+.bar.filled {
+    background-color: var(--icon-color);
+    /* Fylld stapel */
+}
+
+.stars>div {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    font-size: 1em;
+}
+
+.stars svg {
+    shape-rendering: geometricPrecision;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 95%;
+        max-width: 250px;
+        padding: 15px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .card > img {
+        height: auto;
+        max-height: 150px;
+    }
+
+    .card > div > .recipe-list > li > p {
+        display: none;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .details > * {
+        font-size: 0.7rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }
+
+    .difficulty-text {
+        display: none;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 780px) {
+    .card {
+        width: 100%;
+        max-width: 250px;
+        padding: 15px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .card > div > .recipe-list > li > p {
+        display: none;
+    }
+
+    .details > * {
+        font-size: 0.7rem;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }
+
+    .difficulty-text {
+        display: none;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 980px) {
+    .card {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .card > div > .recipe-list > li > p {
+        display: none;
+    }
+
+    .details > * {
+        font-size: 0.75rem;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }
+
+    .difficulty-text {
+        display: none;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+    .card {
+        width: 100%;
+        max-width: 250px;
+        height: 100%;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .card > div > .recipe-list > li > p {
+        display: none;
+    }
+
+    .details {
+        padding: 0.6rem;
+        margin-top: 0.6rem;
+    }
+
+    .details > * , .details > svg{
+        font-size: 0.7rem;
+    }
+ 
+    .difficulty-text {
+        display: none;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1480px) {
+    .card {
+        width: 100%;
+        max-width: 240px;
+        height: 100%;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .card > div > .recipe-list > li > p {
+        font-size: 0.8rem;
+    }
+
+    .details > *, .details > svg {
+        font-size: 0.7rem;
+    }
+
+    .bar {
+        height: 0.9rem;
+    }
+}
+
+@media (min-width: 1481px) and (max-width: 1780px) {
+    .card {
+        width: 100%;
+        max-width: 270px;
+        height: 100%;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .recipe-list h3 {
+        font-size: 1.1em;
+    }
+
+    .card > div > .recipe-list > li > p {
+        font-size: 0.8rem;
+    }
+
+    .details {
+        padding: 0.6rem;
+    }
+
+    .details > *, .details > svg {
+        font-size: 0.7rem;
+    }
+
+    .bar {
+        height: 1rem;
+    }
+}

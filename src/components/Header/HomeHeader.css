@@ -1,0 +1,71 @@
+#root>.body>.header-top {
+    background-image: url("../../images/home-page.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    background-blend-mode: darken;
+
+    padding: 5em;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.682);
+}
+
+.header-title {
+    font-size: 5em;
+    color: var(--white-color);
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+.header-citation {
+    color: var(--white-color);
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+}
+
+.arrow {
+    font-size: 4rem;
+    color: var(--white-color);
+}
+
+@media only screen and (max-width: 600px) {
+    #root>.body>.header-top {
+        padding: 8rem 5rem;
+        background-size: cover;
+    }
+
+    .header-title {
+        font-size: 2.5em;
+    }
+
+    .header-citation {
+        font-size: 1em;
+    }
+
+    .arrow {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    #root>.body>.header-top {
+        padding: 8rem 5rem;
+        background-size: cover;
+    }
+
+    .header-title {
+        font-size: 3.8em;
+    }
+
+    .header-citation {
+        font-size: 1.2em;
+    }
+
+    .arrow {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,51 @@
+/* Time icon */
+.time {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;            /* to center the icon and text vertically */
+}
+
+.time > * {
+    font-size: 0.8rem;
+}
+
+.time span {
+    margin-left: 5px;             /* adds space with time-icon */
+}
+
+@media (max-width: 500px) {
+    .time > * {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 780px) {
+    .time > * {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 980px) {
+    .time > * {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+    .time > * {
+        font-size: 0.75rem;
+    }
+}
+
+
+@media (min-width: 1181px) and (max-width: 1480px) {
+    .time > * {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1481px) and (max-width: 1780px) {
+    .time > * {
+        font-size: 0.75rem;
+    }
+}
